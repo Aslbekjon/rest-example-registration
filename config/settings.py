@@ -32,6 +32,10 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -43,8 +47,13 @@ INSTALLED_APPS = [
     'knox',
     # 'django.contrib.staticfiles',
     'drf_yasg',
+    'corsheaders',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://registration123.pythonanywhere.com",
+    "http://localhost:8080",
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -134,4 +143,12 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

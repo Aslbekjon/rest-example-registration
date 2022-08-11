@@ -6,6 +6,7 @@ coreapi==2.3.3
 coreschema==0.0.4
 cryptography==37.0.4
 Django==4.1
+django-cors-headers==3.13.0
 django-rest-knox==4.2.0
 djangorestframework==3.13.1
 drf-yasg==1.21.3
