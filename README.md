@@ -1,0 +1,2 @@
+# rest-example-registration
+Example
